@@ -6,8 +6,8 @@
 	},
 
 	"enable-isso-on-pages": "Enable Isso on pages",
-	"enable-isso-on-posts": "Enable Disqus on posts",
-	"enable-isso-on-default-home-page": "Enable Disqus on default home page",
+	"enable-isso-on-posts": "Enable Isso on posts",
+	"enable-isso-on-default-home-page": "Enable Isso on default home page",
 	"path-to-isso-data": "Path to Isso data (e.g. your fcgi script)",
 	"path-to-isso-script": "Path to script source for Isso (e.g. embed.js)",
 	"isso-required-settings": "Required settings",
