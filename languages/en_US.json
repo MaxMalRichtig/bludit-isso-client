@@ -1,0 +1,15 @@
+{
+	"plugin-data":
+	{
+		"name": "Isso comment client",
+		"description": "Use isso comments in your bludit blog. (This requires a running isso server! Visit posativ.org/isso for more.) "
+	},
+
+	"enable-isso-on-pages": "Enable Isso on pages",
+	"enable-isso-on-posts": "Enable Disqus on posts",
+	"enable-isso-on-default-home-page": "Enable Disqus on default home page",
+	"path-to-isso-data": "Path to Isso data (e.g. your fcgi script)",
+	"path-to-isso-script": "Path to script source for Isso (e.g. embed.js)",
+	"isso-required-settings": "Required settings",
+	"isso-optional-settings": "Optional settings"
+}

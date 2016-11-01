@@ -1,0 +1,11 @@
+{
+	"plugin-data":
+	{
+		"name": "Isso comment client",
+		"description": "This is isso"
+	},
+
+	"enable-disqus-on-pages": "Isso auf Seiten verfügbar machen",
+	"enable-disqus-on-posts": "Enable Disqus on posts",
+	"enable-disqus-on-default-home-page": "Enable Disqus on default home page"
+}
