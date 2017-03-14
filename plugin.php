@@ -14,7 +14,7 @@ class pluginIsso extends Plugin {
             'pathSrc'=>'',
             'pathCss'=>'',
             'dataLang'=>'',
-            'dataReplySelf'=>'',
+            'dataReplySelf'=>0,
             'dataRequireEmail'=>'',
             'dataCommentsTop'=>'',
             'dataCommentsNested'=>'',
@@ -56,19 +56,16 @@ class pluginIsso extends Plugin {
 		global $Language;
 
 		$html  = '<div>';
-		$html .= '<input type="hidden" name="enablePages" value="0">';
 		$html .= '<input name="enablePages" id="jsenablePages" type="checkbox" value="1" '.($this->getDbField('enablePages')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenablePages">'.$Language->get('Enable Isso on pages').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
-		$html .= '<input type="hidden" name="enablePosts" value="0">';
 		$html .= '<input name="enablePosts" id="jsenablePosts" type="checkbox" value="1" '.($this->getDbField('enablePosts')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenablePosts">'.$Language->get('Enable Isso on posts').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
-		$html .= '<input type="hidden" name="enableDefaultHomePage" value="0">';
 		$html .= '<input name="enableDefaultHomePage" id="jsenableDefaultHomePage" type="checkbox" value="1" '.($this->getDbField('enableDefaultHomePage')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenableDefaultHomePage">'.$Language->get('Enable Isso on default home page').'</label>';
 		$html .= '</div>';
@@ -87,10 +84,11 @@ class pluginIsso extends Plugin {
 		
 		$html .= '<p><h3>'.$Language->get('Optional settings').':</h3></p>';
 		
-		$html .= '<div>';
+		$html .= '<form>';
 		$html .= '<label>data-isso-reply-to-self: [true/false]</label>';
-		$html .= '<input name="datareplyself" id="jsdatareplyself" type="text" value="'.$this->getDbField('dataReplySelf').'">';
-		$html .= '</div>';
+		$html .= '<input name="datareplyself" id="jsdatareplyself" type="radio" value="1" '.(($this->getDbField('dataReplySelf'))?'checked':'').'> true</br>';
+		$html .= '<input name="datareplyself" id="jsdatareplyself2" type="radio" value="0" '.((!$this->getDbField('dataReplySelf'))?'checked':'').'> false';
+		$html .= '</form>';
 		
 		$html .= '<div>';
 		$html .= '<label>data-isso-require-email: [true/false]</label>';
