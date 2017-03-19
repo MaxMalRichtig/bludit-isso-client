@@ -121,17 +121,17 @@ class pluginIsso extends Plugin {
 		$html .= '</div>';
 
 		$html .= '<div>';
-		$html .= '<label>data-isso-avatar-fg: ['.$Language->get('#colorcode').']</label>';
+		$html .= '<label>data-isso-avatar-fg: ['.$Language->get('colorcode').']</label>';
 		$html .= '<input name="dataAvatarFg" id="jsdataavatarfg" type="text" value="'.$this->getDbField('dataAvatarFg').'">';
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>data-isso-avatar-bg: ['.$Language->get('#colorcode').']</label>';
+		$html .= '<label>data-isso-avatar-bg: ['.$Language->get('colorcode').']</label>';
 		$html .= '<input name="dataAvatarBg" id="jsdataavatarbg" type="text" value="'.$this->getDbField('dataAvatarBg').'">';
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>data-isso-lang: ['.$Language->get('(two letter) language code').']</label>';
+		$html .= '<label>data-isso-lang: ['.$Language->get('language code').']</label>';
 		$html .= '<input name="dataLang" id="jsdatalang" type="text" value="'.$this->getDbField('dataLang').'">';
 		$html .= '</div>';
 		
@@ -151,7 +151,7 @@ class pluginIsso extends Plugin {
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>'.$Language->get('Path to custom CSS').'</label>';
+		$html .= '<label>'.$Language->get('Path to custom CSS file').'</label>';
 		$html .= '<input name="pathCss" id="jsdatacss" type="text" value="'.$this->getDbField('pathCss').'">';
 		$html .= '</div>';
 
