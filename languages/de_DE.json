@@ -1,15 +1,21 @@
 {
 	"plugin-data":
 	{
-		"name": "Isso comment client",
-		"description": "Isso Kommentare für deinen bludit blog. (Ein laufender isso server wird hierfür benötigt! Besuche posativ.org/isso für alles Weitere.) "
+		"name": "Isso Client",
+		"description": "Isso Kommentare für deinen bludit blog. (Das hier ist nur der Client für Isso. Du benötigst immer noch einen Isso Server! Besuche posativ.org/isso für mehr Infos.) "
 	},
-
-	"enable-isso-on-pages": "Isso-Kommentare auf Seiten aktivieren",
-	"enable-isso-on-posts": "Isso-Kommentare in Beiträgen aktivieren",
-	"enable-isso-on-default-home-page": "Isso auf der Basisseite verwenden",
-	"path-to-isso-data": "Pfad zu den Isso-Daten (z.B. dein fcgi Skript)",
-	"path-to-isso-script": "Pfad zur Skriptquelle für Isso (z.B. embed.js)",
-	"isso-required-settings": "Benötigte Einstellungen",
-	"isso-optional-settings": "Optionale Einstellungen"
+	"enableOnPage": "Isso-Kommentare auf Seiten aktivieren",
+	"enableOnPost": "Isso-Kommentare für Beiträge aktivieren",
+	"enableOnDefaultPage": "Isso auf der Basisseite verwenden",
+	"pathToData": "Pfad zu den Isso-Daten (z.B. dein fcgi Skript)",
+	"pathToScript": "Pfad zur Skriptquelle für Isso (z.B. embed.js)",
+	"pathToCss": "Pfad zu einer eigenen CSS Datei",
+	"settingsRequired": "Benötigte Einstellungen",
+	"settingsOptional": "Optionale Einstellungen",
+	"isTrue": "wahr",
+	"isFalse": "falsch",
+	"colorCode": "Farbcode",
+	"languageCode": "Sprachcode",
+	"numeric": "Zahl",
+	"noscriptMsg": "Das Kommentarfeld, betrieben mit Isso, kann ohne javascript nicht angezeigt werden!"
 }
