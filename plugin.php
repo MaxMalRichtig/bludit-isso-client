@@ -11,19 +11,19 @@ class pluginIsso extends Plugin {
 			'enablePosts'=>0,
 			'enableDefaultHomePage'=>1,
 			'pathData'=>'',
-            'pathSrc'=>'',
-            'pathCss'=>'',
-            'dataLang'=>'',
-            'dataReplySelf'=>'false',
-            'dataRequireAuthor'=>'true',
-            'dataRequireEmail'=>'false',
-            'dataCommentsTop'=>'10',
-            'dataCommentsNested'=>'5',
-            'dataRevealClick'=>'5',
-            'dataAvatar'=>'true',
-            'dataAvatarBg'=>'',
-            'dataAvatarFg'=>'',
-            'dataVote'=>'true'
+			'pathSrc'=>'',
+			'pathCss'=>'',
+			'dataLang'=>'',
+			'dataReplySelf'=>'false',
+			'dataRequireAuthor'=>'true',
+			'dataRequireEmail'=>'false',
+			'dataCommentsTop'=>'10',
+			'dataCommentsNested'=>'5',
+			'dataRevealClick'=>'5',
+			'dataAvatar'=>'true',
+			'dataAvatarBg'=>'',
+			'dataAvatarFg'=>'',
+			'dataVote'=>'true'
 		);
 	}
 
