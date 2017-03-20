@@ -207,6 +207,10 @@ class pluginIsso extends Plugin {
 			    $html .= 'data-isso-reply-to-self="'.$this->getDbField('dataReplySelf').'" ';
 			}
 			
+			if( $this->getDbField('dataRequireAuthor') == 'true' || $this->getDbField('dataRequireAuthor') == 'false' ) {
+			    $html .= 'data-isso-require-author="'.$this->getDbField('dataRequireAuthor').'" ';
+			}
+			
 			if( $this->getDbField('dataRequireEmail') == 'true' || $this->getDbField('dataRequireEmail') == 'false' ) {
 			    $html .= 'data-isso-require-email="'.$this->getDbField('dataRequireEmail').'" ';
 			}
