@@ -51,16 +51,19 @@ class pluginIsso extends Plugin {
 		global $Language;
 
 		$html  = '<div>';
+		$html .= '<input name="enablePages" type="hidden" value="0">';
 		$html .= '<input name="enablePages" id="jsenablePages" type="checkbox" value="1" '.($this->getDbField('enablePages')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenablePages">'.$Language->get('Enable Isso on pages').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
+		$html .= '<input name="enablePosts" type="hidden" value="0">';
 		$html .= '<input name="enablePosts" id="jsenablePosts" type="checkbox" value="1" '.($this->getDbField('enablePosts')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenablePosts">'.$Language->get('Enable Isso on posts').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
+		$html .= '<input name="enableDefaultHomePage" type="hidden" value="0">';
 		$html .= '<input name="enableDefaultHomePage" id="jsenableDefaultHomePage" type="checkbox" value="1" '.($this->getDbField('enableDefaultHomePage')?'checked':'').'>';
 		$html .= '<label class="forCheckbox" for="jsenableDefaultHomePage">'.$Language->get('Enable Isso on default home page').'</label>';
 		$html .= '</div>';
