@@ -49,39 +49,43 @@ class pluginIsso extends Plugin {
 	public function form()
 	{
 		global $Language;
+		
+		$html = '<div style="margin: 2em 0;">';
+		$html .= '<i>'.$Language->get('intro-header').'</i>';
+		$html .= '</div>';
 
-		$html  = '<div>';
+		$html .= '<div>';
 		$html .= '<input name="enablePages" type="hidden" value="0">';
 		$html .= '<input name="enablePages" id="jsenablePages" type="checkbox" value="1" '.($this->getDbField('enablePages')?'checked':'').'>';
-		$html .= '<label class="forCheckbox" for="jsenablePages">'.$Language->get('Enable Isso on pages').'</label>';
+		$html .= '<label class="forCheckbox" for="jsenablePages">'.$Language->get('enable-on-page').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
 		$html .= '<input name="enablePosts" type="hidden" value="0">';
 		$html .= '<input name="enablePosts" id="jsenablePosts" type="checkbox" value="1" '.($this->getDbField('enablePosts')?'checked':'').'>';
-		$html .= '<label class="forCheckbox" for="jsenablePosts">'.$Language->get('Enable Isso on posts').'</label>';
+		$html .= '<label class="forCheckbox" for="jsenablePosts">'.$Language->get('enable-on-post').'</label>';
 		$html .= '</div>';
 
 		$html .= '<div>';
 		$html .= '<input name="enableDefaultHomePage" type="hidden" value="0">';
 		$html .= '<input name="enableDefaultHomePage" id="jsenableDefaultHomePage" type="checkbox" value="1" '.($this->getDbField('enableDefaultHomePage')?'checked':'').'>';
-		$html .= '<label class="forCheckbox" for="jsenableDefaultHomePage">'.$Language->get('Enable Isso on default home page').'</label>';
+		$html .= '<label class="forCheckbox" for="jsenableDefaultHomePage">'.$Language->get('enable-on-default-page').'</label>';
 		$html .= '</div>';
 		
-		$html .= '<p><h3>'.$Language->get('Required settings').':</h3></p>';
+		$html .= '<p><h3>'.$Language->get('required-settings').':</h3></p>';
 		
 		$html .= '<div>';
-		$html .= '<label>data-isso: '.$Language->get('Path to Isso data (e.g. your fcgi script)').'</label>';
+		$html .= '<label>data-isso: '.$Language->get('path-to-data').'</label>';
 		$html .= '<input name="pathData" id="jsdata" type="text" value="'.$this->getDbField('pathData').'">';
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>src: '.$Language->get('Path to script source for Isso (e.g. embed.js)').'</label>';
+		$html .= '<label>src: '.$Language->get('path-to-script').'</label>';
 		$html .= '<input name="pathSrc" id="jssource" type="text" value="'.$this->getDbField('pathSrc').'">';
 		$html .= '</div>';
 		
 
-		$html .= '<p><h3>'.$Language->get('Optional settings').':</h3></p>';
+		$html .= '<p><h3>'.$Language->get('optional-settings').':</h3></p>';
 		
 		$html .= '<div>';
 		$html .= '<label>data-isso-reply-to-self: ['.$Language->get('true').'/'.$Language->get('false').']</label>';
@@ -124,17 +128,17 @@ class pluginIsso extends Plugin {
 		$html .= '</div>';
 
 		$html .= '<div>';
-		$html .= '<label>data-isso-avatar-fg: ['.$Language->get('colorcode').']</label>';
+		$html .= '<label>data-isso-avatar-fg: ['.$Language->get('color-code').']</label>';
 		$html .= '<input name="dataAvatarFg" id="jsdataavatarfg" type="text" value="'.$this->getDbField('dataAvatarFg').'">';
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>data-isso-avatar-bg: ['.$Language->get('colorcode').']</label>';
+		$html .= '<label>data-isso-avatar-bg: ['.$Language->get('color-code').']</label>';
 		$html .= '<input name="dataAvatarBg" id="jsdataavatarbg" type="text" value="'.$this->getDbField('dataAvatarBg').'">';
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>data-isso-lang: ['.$Language->get('language code').']</label>';
+		$html .= '<label>data-isso-lang: ['.$Language->get('language-code').']</label>';
 		$html .= '<input name="dataLang" id="jsdatalang" type="text" value="'.$this->getDbField('dataLang').'">';
 		$html .= '</div>';
 		
@@ -154,7 +158,7 @@ class pluginIsso extends Plugin {
 		$html .= '</div>';
 		
 		$html .= '<div>';
-		$html .= '<label>'.$Language->get('Path to custom CSS file').'</label>';
+		$html .= '<label>'.$Language->get('path-to-css').'</label>';
 		$html .= '<input name="pathCss" id="jsdatacss" type="text" value="'.$this->getDbField('pathCss').'">';
 		$html .= '</div>';
 
@@ -167,7 +171,7 @@ class pluginIsso extends Plugin {
 
 		if( $this->enable ) {
 			$html = '<section id="isso-thread"></section>';
-			$html .= '<noscript>'.$Language->get('The comment section powered by isso can not be shown without javascript!');
+			$html .= '<noscript>'.$Language->get('no-script-msg');
 			$html .= '</noscript>';
 			return $html;
 		}
@@ -185,7 +189,7 @@ class pluginIsso extends Plugin {
 
 		if( $this->enable && !$Url->notFound()) {
 			$html = '<section id="isso-thread"></section>';
-			$html .= '<noscript>'.$Language->get('The comment section powered by isso can not be shown without javascript!');
+			$html .= '<noscript>'.$Language->get('no-script-msg');
 			$html .= '</noscript>';
 			return $html;
 		}
