@@ -6,5 +6,8 @@ It provides a CLIENT for isso - it DOES NOT install a isso server! You have to p
 
 If you want to know more about the configuration of this plugin, see the [dedicated part of the isso documentation](https://posativ.org/isso/docs/configuration/client/).
 
+---
 
-*** NOTE: This plugin is still in it's early stages. So be kind and post an issue, if you encounter anything strange. ***
+_NOTE: This plugin is still in it's early stages. So be kind and post an issue, if you encounter anything strange._
+
+THIS CODE IS ORIGINALLY HOSTED AT: https://git.mal-richtig.de/maxmalrichtig/bludit-isso-client/
